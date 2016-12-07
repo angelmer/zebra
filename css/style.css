@@ -276,6 +276,7 @@ opacity:0;
     clear: both;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+    padding-top: 10px;
 }
 .clear {
     clear: both;
@@ -286,8 +287,11 @@ opacity:0;
     margin-left: 10px;
     padding-bottom: 20px;
 }
+.features-item p {
+    margin-left: 70px;
+}
 .features-item-image {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 10px;
     float: left;
     width: 60px;
