@@ -335,19 +335,20 @@ footer {
 .our-chanel-youtube {
     position: relative;
     float: left;
-    margin-top: 100px;
-    margin-left: 25%;
-    margin-bottom: 30px;
+    margin-top: 60px;
+    margin-left: 30%;
+    margin-bottom: 80px;
     width: 505px;
     height: 197px;
 }
 .youtube-button {
     display: block;
     position: relative;
-    width: 505px;
-    height: 197px;
+    width: 400px;
+    height: 156px;
     background-color: #ffffff;
     background-image: url(../img/youtube-logo.png);
+    background-repeat: no-repeat;
     border-radius: 20px;
     box-shadow: 0 0 5px 0px #000000;  
     z-index: 100;
