@@ -32,7 +32,7 @@ a:visited {
 }
 .social {
     float: right;
-    padding-top: 10px;
+    padding-top: 20px;
     font-size: 0;
     line-height: 0;
 }
@@ -40,30 +40,26 @@ a:visited {
     display: inline-block;
     vertical-align: top;
     margin-left: 10px;
-    width: 35px;
-    height: 35px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background-color: rgba(192, 192, 192, 0.5);
 }
 .youtube {
     background-image: url(../img/social-sprite.png);
     background-repeat: no-repeat;
-    background-position: 0px -0px;
+    background-position: 0px -72px;
 }
 .vk {
     background-image: url(../img/social-sprite.png);
     background-repeat: no-repeat;
-    background-position: 0px -44px;
+    background-position: 0px -24px;
 }
-.insta {
-    background-image: url(../img/social-sprite.png);
-    background-repeat: no-repeat;
-    background-position: -42px 0px;
-}
+
 .fb {
     background-image: url(../img/social-sprite.png);
     background-repeat: no-repeat;
-    background-position: -122px 0px;
+    background-position: 0px 0px;
 }
 .main-navigation {
     margin-bottom: 30px;
