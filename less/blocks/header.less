@@ -1,0 +1,57 @@
+.header {
+  padding: 20px 0 0 0;
+}
+
+.header__logo {
+  padding: 10px 0 0 0;
+}
+
+.header__logo-text {
+  text-align: center;
+  margin: 0;
+  color: @main-color;
+}
+
+.header__navigation {
+  position: relative;
+}
+
+.header__navigation-block {
+  position: absolute;
+  top: -2px;
+  right: -160px;
+  margin: 0;
+  padding: 15px 10px 10px 10px;
+  background-color: @main-color;
+  border-radius: 15px;
+  z-index: 10;
+
+}
+
+.header__navigation-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -35px;
+  width: 47px;
+  height: 35px;
+  background: url("../img/zebra-open.png") no-repeat @main-color -5px;
+  border-radius: 15px 0 15px 15px;
+}
+
+.header__navigation-item {
+  list-style: none;
+}
+
+.header__navigation-link {
+  display: block;
+  padding: 5px 10px;
+  color: @white;
+  text-decoration: none;
+  border-bottom: 1px solid @border-menu;
+  border-radius: 8px;
+}
+
+.header__navigation-link:hover {
+  background-color: @hover-menu;
+}
