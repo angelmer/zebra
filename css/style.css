@@ -81,8 +81,9 @@ img {
   padding: 10px 0 0 0;
 }
 .header__logo-text {
-  text-align: center;
   margin: 0;
+  font-size: 12px;
+  text-align: center;
   color: #c71a1a;
 }
 .header__navigation {
@@ -146,6 +147,7 @@ img {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 0 20px 0 20px;
 }
 .social__icon {
   width: 30px;
@@ -181,6 +183,41 @@ img {
   height: 20px;
   background: #c71a1a;
 }
+.main__preview {
+  width: 280px;
+  padding: 0 0 30px 0;
+}
+.main__features {
+  padding: 0 0 20px 0;
+}
+.main__features-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0 10px 0;
+  border-top: 1px solid grey;
+}
+.main__features-item:last-child {
+  border-bottom: 1px solid grey;
+}
 .main__features-text {
+  width: 210px;
   margin: 0;
+  font-size: 14px;
+}
+.main__features-icon {
+  width: 70px;
+}
+.main__features-icon-first {
+  background: url('../img/animation.png') no-repeat 10% 50%;
+}
+.main__features-icon-second {
+  background: url('../img/video.png') no-repeat 10% 50%;
+}
+.main__features-icon-third {
+  background: url('../img/tv.png') no-repeat 10% 50%;
+}
+.main__bottom-image {
+  height: 40px;
+  background: url('../img/lenta-mobile@1x.jpg') no-repeat;
 }
