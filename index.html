@@ -10,35 +10,35 @@
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
-<!--for menu open navigation-->
-<input type="checkbox" id="nav-toggle" hidden>
-<!---->
   <header class="header">
+    <!--for menu open navigation-->
+    <input type="checkbox" id="nav-toggle" hidden>
+    <!---->
+    <label for="nav-toggle" class="nav-toggle" onclick></label>
+    <nav class="header__navigation">
+      <ul class="header__navigation-block">
+        <!--open, close menu-->
+        <li class="header__navigation-item">
+          <a class="header__navigation-link"  href="mult.html">мультфильмы</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="video.html">видеоблогинг</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="photo.html">Фото</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="smi.html">СМИ</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="progress.html">Достижения</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </nav>
     <div class="container">
-      <nav class="header__navigation">
-          <!--open, close menu-->
-          <label for="nav-toggle"></label>
-        <ul class="header__navigation-block">
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="video.html">мультфильмы</a>
-          </li>
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="video.html">видеоблогинг</a>
-          </li>
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="photo.html">Фото</a>
-          </li>
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="smi.html">СМИ</a>
-          </li>
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="progress.html">Достижения</a>
-          </li>
-          <li class="header__navigation-item">
-            <a class="header__navigation-link" href="contacts.html">Контакты</a>
-          </li>
-        </ul>
-      </nav>
       <div class="social">
         <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
         <a class="social__icon social__icon-vk" href="https://vk.com/zebra_mult" target="_blank"></a>
@@ -46,7 +46,7 @@
       </div>
       <div class="header__logo">
         <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
-        <a href="#">
+        <a>
           <img src="img/logo.png" alt="logo-zebra" width="2944" height="757"/>
         </a>
         <p class="header__logo-text">студия видеотворчества и мультипликации</p>

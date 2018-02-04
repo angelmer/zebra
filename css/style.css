@@ -9,6 +9,12 @@ body {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  -webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
 }
 img {
   max-width: 100%;
@@ -27,6 +33,25 @@ img {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+@media screen and (min-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
+@media screen and (max-width: 320px) {
+  html,
+  body {
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .nav {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 .container {
   width: 320px;
@@ -61,34 +86,52 @@ img {
   color: #c71a1a;
 }
 .header__navigation {
-  position: relative;
+  position: absolute;
+  top: 20px;
+  right: -160px;
+  height: 100%;
+  padding: 30px 10px 10px 10px;
+  background-color: #c71a1a;
+  border-radius: 15px 0 0 0;
+  z-index: 100;
+  -webkit-transition: right 0.3s;
+  transition: right 0.3s;
 }
 .header__navigation-block {
-  position: absolute;
-  top: -2px;
-  right: -160px;
   margin: 0;
-  padding: 15px 10px 10px 10px;
-  background-color: #c71a1a;
-  border-radius: 15px;
-  z-index: 10;
+  padding: 0;
 }
-.header__navigation-block::before {
-  content: "";
+.nav-toggle {
   position: absolute;
-  top: 0;
-  left: -35px;
+  top: 20px;
+  right: -12px;
   width: 47px;
   height: 35px;
-  background: url("../img/zebra-open.png") no-repeat #c71a1a -5px;
+  background: url("../img/zebra-open.png") no-repeat -5px #c71a1a;
   border-radius: 15px 0 15px 15px;
+  z-index: 200;
+  cursor: pointer;
+  -webkit-transition: background 0.3s, right 0.3s;
+  transition: background 0.3s, right 0.3s;
+}
+#nav-toggle {
+  position: absolute;
+  display: none;
+}
+[id='nav-toggle']:checked ~ .nav-toggle {
+  top: 25px;
+  right: 105px;
+  background: url("../img/close.png") no-repeat;
+}
+[id='nav-toggle']:checked ~ .header__navigation {
+  right: 0;
 }
 .header__navigation-item {
   list-style: none;
 }
 .header__navigation-link {
   display: block;
-  padding: 5px 10px;
+  padding: 10px 20px;
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid #810808;
