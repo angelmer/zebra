@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -12,16 +14,17 @@ body {
   -webkit-animation: bugfix infinite 1s;
 }
 
-@-webkit-keyframes bugfix {
-  to {
-    padding: 0;
-  }
-}
-
 img {
   max-width: 100%;
   height: auto;
   vertical-align: bottom;
+}
+
+
+@-webkit-keyframes bugfix {
+  to {
+    padding: 0;
+  }
 }
 
 .visually-hidden:not(:focus):not(:active) {
