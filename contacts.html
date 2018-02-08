@@ -14,11 +14,10 @@
 <header class="header">
   <!--for menu open navigation-->
   <input type="checkbox" id="nav-toggle" hidden>
-  <!---->
+  <!--open, close menu-->
   <label for="nav-toggle" class="nav-toggle" onclick></label>
   <nav class="header__navigation">
     <ul class="header__navigation-block">
-      <!--open, close menu-->
       <li class="header__navigation-item">
         <a class="header__navigation-link"  href="mult.html">мультфильмы</a>
       </li>
@@ -58,27 +57,32 @@
     </div>
   </div>
 </header>
-        <main class="main-contacts">
-            <div class="contacts-item">
-                <p>Руководитель студии</p>
-                <p class="contacts-head">Александра Викторовна Кутикина</p>
-                <p>тел: <span>8-966-320-77-11</span></p>
-                <p>e-mail: <span>akutikina@mail.ru</span></p>
-                <p>наш канал youtube: <a href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank">youtube.com/c/ZEBRASTUDIO</a></p>
-                <p>группа в контакте: <span><a href="https://vk.com/multzebra" target="_blank">vk.com/multzebra</a></span></p>
-                <p>инстаграм: <span><a href="https://www.instagram.com/zebramult" target="_blank">instagram.com/zebramult</a></span></p>
-                <p>адрес: <span>г. Мытищи, ул. Белобородова, д. 2</span></p>
-            </div>
-            <div class="map" id="map"></div>
-        </main>
-        <footer class="container">
-            <div class="copyright">
-                <p>Запись на ознакомительное занятие по тел. 8-966-320-77-11</p>
-            </div>
-        </footer>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-    </script>
-    <script src="js/script.js" type="text/javascript"></script>
+<main class="main__contacts">
+  <div class="container">
+    <section class="contacts">
+      <p class="contacts__title">руководитель студии:</p>
+      <p class="contacts__manager">Александра<br/> Викторовна<br/> Кутикина</p>
+      <p class="contacts__phone">наш телефон:<span>8-966-320-77-11</span></p>
+      <p class="contacts__email">наш e-mail:<span>akutikina@mail.ru</span></p>
+      <p class="contacts__youtube">наш канал youtube: <a href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank">youtube</a>
+      </p>
+      <p class="contacts__vk">группа в контакте: <span><a href="https://vk.com/multzebra" target="_blank">vkontakte</a></span></p>
+      <p class="contacts__instagram">инстаграм: <span><a href="https://www.instagram.com/zebramult"
+                             target="_blank">instagram</a></span></p>
+      <p class="contacts__address">адрес: <span>г. Мытищи, ул. Белобородова, д. 2</span></p>
+    </section>
+  </div>
+  <div class="map" id="map"></div>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="copyright">
+      <p class="copyright__text">Запись на ознакомительное занятие по тел. 8-966-320-77-11</p>
+    </div>
+  </div>
+</footer>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>
