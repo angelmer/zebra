@@ -3,7 +3,6 @@
 }
 
 .header__logo {
-  padding: 10px 0 0 0;
 }
 
 .header__logo-text {
@@ -16,7 +15,7 @@
 .header__navigation {
   position: absolute;
   top: 20px;
-  right: -160px;
+  right: -350px;
   height: 100%;
   padding: 30px 10px 10px 10px;
   background-color: @main-color;
@@ -50,12 +49,12 @@
 
 [id='nav-toggle']:checked ~ .nav-toggle {
   top: 25px;
-  right: 105px;
+  right: 55px;
   background: url("../img/close.png") no-repeat;
 }
 
 [id='nav-toggle']:checked ~ .header__navigation {
- right: 0;
+ right: -180px;
 }
 
 .header__navigation-item {
@@ -73,4 +72,33 @@
 
 .header__navigation-link:hover {
   background-color: @hover-menu;
+}
+
+@media (min-width: 768px) {
+  .header {
+
+  }
+
+  .header__navigation {
+    position: static;
+    border-radius: 0;
+  }
+
+  .header__navigation-block {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__navigation-link {
+    border: none;
+    border-radius: 0;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+.header__logo-text {
+  font-size: 14px;
+}
 }

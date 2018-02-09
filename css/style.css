@@ -61,14 +61,15 @@ img {
   padding-right: 20px;
   margin: 0 auto;
 }
-/*@media (min-width: 768px) {
+@media (min-width: 768px) {
   .container {
     width: 768px;
     padding-left: 50px;
     padding-right: 50px;
+    outline: 1px solid green;
   }
 }
-
+/*
 @media (min-width: 1150px) {
   .container {
     width: 1150px;
@@ -130,7 +131,7 @@ img {
 .photo__wrapper {
   width: 135px;
   height: 100px;
-  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
   overflow: hidden;
 }
 .photo__items {
@@ -143,8 +144,29 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.progress__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px 0 0 0;
+}
+.progress__wrapper {
+  width: 135px;
+  margin: 0 0 10px 0;
+}
+.progress__title {
+  font-size: 16px;
+}
+.progress__description {
+  font-size: 14px;
+}
 .map {
-  height: 200px;
+  height: 250px;
   background: url('../img/map-mobile.jpg') no-repeat 50% antiquewhite;
 }
 .contacts {
@@ -165,9 +187,6 @@ img {
 .header {
   padding: 20px 0 0 0;
 }
-.header__logo {
-  padding: 10px 0 0 0;
-}
 .header__logo-text {
   margin: 0;
   font-size: 12px;
@@ -177,7 +196,7 @@ img {
 .header__navigation {
   position: absolute;
   top: 20px;
-  right: -160px;
+  right: -350px;
   height: 100%;
   padding: 30px 10px 10px 10px;
   background-color: #c71a1a;
@@ -209,11 +228,11 @@ img {
 }
 [id='nav-toggle']:checked ~ .nav-toggle {
   top: 25px;
-  right: 105px;
+  right: 55px;
   background: url("../img/close.png") no-repeat;
 }
 [id='nav-toggle']:checked ~ .header__navigation {
-  right: 0;
+  right: -180px;
 }
 .header__navigation-item {
   list-style: none;
@@ -229,7 +248,30 @@ img {
 .header__navigation-link:hover {
   background-color: #E34F4F;
 }
-.social {
+@media (min-width: 768px) {
+  .header__navigation {
+    position: static;
+    border-radius: 0;
+  }
+  .header__navigation-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header__navigation-link {
+    border: none;
+    border-radius: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .header__logo-text {
+    font-size: 14px;
+  }
+}
+.social__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
