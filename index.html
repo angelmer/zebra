@@ -11,13 +11,17 @@
 </head>
 <body>
   <header class="header">
-
-    <!--for menu open navigation-->
-    <input type="checkbox" id="nav-toggle" hidden>
-    <!--open, close menu-->
-    <label for="nav-toggle" class="nav-toggle" onclick></label>
-    <nav class="header__navigation">
-      <div class="container">
+    <div class="container">
+    <div class="social">
+      <div class="social__wrapper">
+        <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
+        <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
+        <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
+      </div>
+    </div>
+    </div>
+    <nav class="header__navigation header__navigation--closed header__navigation--nojs">
+      <button class="header__navigation-toggle"></button>
       <ul class="header__navigation-block">
         <li class="header__navigation-item">
           <a class="header__navigation-link"  href="mult.html">мультфильмы</a>
@@ -38,19 +42,9 @@
           <a class="header__navigation-link" href="contacts.html">Контакты</a>
         </li>
       </ul>
-      </div>
     </nav>
-      <div class="social">
-        <div class="container">
-          <div class="social__wrapper">
-        <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
-        <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
-        <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
-          </div>
-        </div>
-      </div>
+    <div class="container">
       <div class="header__logo">
-        <div class="container">
         <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
         <a>
           <picture>
@@ -60,9 +54,8 @@
           </picture>
         </a>
         <p class="header__logo-text">студия видеотворчества и мультипликации</p>
-        </div>
       </div>
-
+    </div>
   </header>
   <main class="main">
     <div class="container">
@@ -95,7 +88,7 @@
     </div>
     </div>
   </footer>
-
+<script src="js/main.js"></script>
 </body>
 
 </html>

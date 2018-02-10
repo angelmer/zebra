@@ -2,9 +2,6 @@
   padding: 20px 0 0 0;
 }
 
-.header__logo {
-}
-
 .header__logo-text {
   margin: 0;
   font-size: 12px;
@@ -13,13 +10,11 @@
 }
 
 .header__navigation {
-  position: absolute;
   top: 20px;
-  right: -350px;
+  right: 0;
   height: 100%;
-  padding: 30px 10px 10px 10px;
-  background-color: @main-color;
-  border-radius: 15px 0 0 0;
+  padding: 10px 10px 10px 10px;
+
   z-index: 100;
   transition: right 0.3s;
 }
@@ -27,34 +22,38 @@
 .header__navigation-block {
   margin: 0;
   padding: 0;
+  background-color: @main-color;
+  z-index: 100;
 }
 
-.nav-toggle {
+.header__navigation-toggle {
   position: absolute;
-  top: 20px;
-  right: -12px;
+  right: -10px;
   width: 47px;
   height: 35px;
   background: url("../img/zebra-open.png") no-repeat -5px @main-color;
+  border: none;
   border-radius: 15px 0 15px 15px;
+  transition: background 0.3s, right 0.3s;
   z-index: 200;
   cursor: pointer;
-  transition: background 0.3s, right 0.3s;
 }
 
-#nav-toggle {
+.header__navigation--opened .header__navigation-block {
   position: absolute;
-  display: none;
+  right: 0;
+  height: 100%;
+  padding-top: 30px;
+  border-radius: 15px 0 0 0;
 }
 
-[id='nav-toggle']:checked ~ .nav-toggle {
-  top: 25px;
-  right: 55px;
-  background: url("../img/close.png") no-repeat;
+.header__navigation--closed .header__navigation-block {
+  position: absolute;
+  right: -140px;
 }
 
-[id='nav-toggle']:checked ~ .header__navigation {
- right: -180px;
+.header__navigation--nojs .header__navigation-block {
+  position: static;
 }
 
 .header__navigation-item {
