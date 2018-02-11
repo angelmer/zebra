@@ -4,13 +4,17 @@
 
 //header menu open close
 
-var headerMenuButton = document.getElementsByClassName('header__navigation-toggle');
-var headerMenu = document.getElementsByClassName('header__navigation-block');
+var toggler = document.getElementById('toggler');
+var headerMenu = document.getElementById('navigation');
+headerMenu.classList.remove('header__navigation--nojs');
 
+toggler.addEventListener('click', function(event){
 
-var menuToggle = function(event) {
   event.preventDefault();
+  headerMenu.classList.contains('header__navigation--closed') ?
+    (headerMenu.classList.add('header__navigation--opened') ,
+      headerMenu.classList.remove('header__navigation--closed')) :
+    (headerMenu.classList.add('header__navigation--closed') ,
+      headerMenu.classList.remove('header__navigation--opened'))
 
-};
-
-console.log();
+});

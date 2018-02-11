@@ -11,17 +11,23 @@
 </head>
 <body>
 <header class="header">
-  <!--for menu open navigation-->
-  <input type="checkbox" id="nav-toggle" hidden>
-  <!--open, close menu-->
-  <label for="nav-toggle" class="nav-toggle" onclick></label>
-  <nav class="header__navigation">
+  <div class="container">
+    <div class="social">
+      <div class="social__wrapper">
+        <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
+        <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
+        <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__navigation header__navigation--closed header__navigation--nojs" id="navigation">
+    <button id="toggler"></button>
     <ul class="header__navigation-block">
       <li class="header__navigation-item">
         <a class="header__navigation-link"  href="mult.html">мультфильмы</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link">видеоблогинг</a>
+        <a class="header__navigation-link" href="blogers.html">видеоблогинг</a>
       </li>
       <li class="header__navigation-item">
         <a class="header__navigation-link" href="photo.html">Фото</a>
@@ -38,14 +44,9 @@
     </ul>
   </nav>
   <div class="container">
-    <div class="social">
-      <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
-      <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
-      <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
-    </div>
     <div class="header__logo">
       <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
-      <a  href="index.html">
+      <a href="index.html">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.png">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.png">
@@ -177,7 +178,7 @@
     </div>
   </div>
 </footer>
-
+<script src="js/main.js"></script>
 </body>
 
 </html>

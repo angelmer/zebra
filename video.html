@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -10,20 +9,25 @@
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
-
 <body>
 <header class="header">
-  <!--for menu open navigation-->
-  <input type="checkbox" id="nav-toggle" hidden>
-  <!--open, close menu-->
-  <label for="nav-toggle" class="nav-toggle" onclick></label>
-  <nav class="header__navigation">
+  <div class="container">
+    <div class="social">
+      <div class="social__wrapper">
+        <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
+        <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
+        <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
+      </div>
+    </div>
+  </div>
+  <nav class="header__navigation header__navigation--closed header__navigation--nojs" id="navigation">
+    <button id="toggler"></button>
     <ul class="header__navigation-block">
       <li class="header__navigation-item">
-        <a class="header__navigation-link" href="mult.html">мультфильмы</a>
+        <a class="header__navigation-link"  href="mult.html">мультфильмы</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link">видеоблогинг</a>
+        <a class="header__navigation-link" href="blogers.html">видеоблогинг</a>
       </li>
       <li class="header__navigation-item">
         <a class="header__navigation-link" href="photo.html">Фото</a>
@@ -35,16 +39,11 @@
         <a class="header__navigation-link" href="progress.html">Достижения</a>
       </li>
       <li class="header__navigation-item">
-        <a class="header__navigation-link"  href="contacts.html">Контакты</a>
+        <a class="header__navigation-link" href="contacts.html">Контакты</a>
       </li>
     </ul>
   </nav>
   <div class="container">
-    <div class="social">
-      <a class="social__icon social__icon-youtube" href="https://www.youtube.com/channel/UCYl-EKURBluszEpvqiGo0-Q" target="_blank"></a>
-      <a class="social__icon social__icon-vk" href="https://vk.com/multzebra" target="_blank"></a>
-      <a class="social__icon social__icon-instagram" href="https://www.instagram.com/zebramult/" target="_blank"></a>
-    </div>
     <div class="header__logo">
       <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
       <a href="index.html">
@@ -72,6 +71,7 @@
                 <p>Запись на ознакомительное занятие по тел. 8-966-320-77-11</p>
             </div>
         </footer>
+<script src="js/main.js"></script>
 </body>
 
 </html>
