@@ -125,9 +125,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 10px 0 10px 0;
 }
 .bloger__wrapper {
@@ -149,6 +148,11 @@ img {
 }
 .bloger__about {
   font-size: 14px;
+}
+@media (min-width: 768px) {
+  .bloger__description {
+    width: 400px;
+  }
 }
 .photo__wrapper {
   width: 135px;
