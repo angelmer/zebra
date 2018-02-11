@@ -66,7 +66,6 @@ img {
     width: 768px;
     padding-left: 50px;
     padding-right: 50px;
-    outline: 1px solid green;
   }
 }
 /*
@@ -252,26 +251,37 @@ img {
   background-color: #E34F4F;
 }
 @media (min-width: 768px) {
-  .header__navigation {
+  .header__navigation--closed .header__navigation-block {
     position: static;
-    border-radius: 0;
-  }
-  .header__navigation-block {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #toggler {
+    display: none;
+  }
+  .header__navigation {
+    position: static;
+    border-radius: 0;
+    padding: 0;
   }
   .header__navigation-link {
     border: none;
     border-radius: 0;
   }
-  .nav-toggle {
-    display: none;
+  .header__navigation-item:nth-child(4) {
+    margin-left: 100px;
+  }
+  .header__logo {
+    width: 280px;
+    margin: -20px auto;
   }
   .header__logo-text {
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: bold;
   }
 }
 .social__wrapper {
@@ -352,6 +362,37 @@ img {
 }
 .main__features-icon-third {
   background: url('../img/tv.png') no-repeat 10% 50%;
+}
+@media (min-width: 768px) {
+  .main__preview {
+    width: 100%;
+  }
+  .main__preview::after {
+    top: 300px;
+  }
+  .main__features {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main__features-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border: none;
+  }
+  .main__features-item:last-child {
+    border: none;
+  }
+  .main__features-icon {
+    height: 60px;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
 }
 .copyright__text {
   font-size: 16px;

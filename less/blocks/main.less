@@ -64,3 +64,33 @@
 .main__features-icon-third {
   background: url('../img/tv.png')no-repeat 10% 50%;
 }
+
+@media (min-width: 768px) {
+  .main__preview {
+    width: 100%;
+  }
+
+  .main__preview::after {
+    top: 300px;
+  }
+
+  .main__features {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main__features-item {
+    flex-direction: column;
+    border: none;
+  }
+
+  .main__features-item:last-child {
+    border: none;
+  }
+
+  .main__features-icon {
+    height: 60px;
+    align-self: center;
+  }
+
+}
