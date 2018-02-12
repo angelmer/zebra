@@ -70,9 +70,9 @@ img {
 }
 @media (min-width: 1150px) {
   .container {
-    width: 1150px;
-    padding-left: 50px;
-    padding-right: 50px;
+    width: 1000px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 .footer {
@@ -124,8 +124,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10px 0 10px 0;
 }
 .bloger__wrapper {
@@ -150,7 +151,12 @@ img {
 }
 @media (min-width: 768px) {
   .bloger__description {
-    width: 400px;
+    width: 500px;
+  }
+}
+@media (min-width: 1150px) {
+  .bloger__wrapper {
+    margin: 0 0 0 100px;
   }
 }
 .photo__wrapper {
@@ -190,6 +196,11 @@ img {
 .progress__description {
   font-size: 14px;
 }
+@media (min-width: 768px) {
+  .progress__wrapper {
+    width: 290px;
+  }
+}
 @media (min-width: 1150px) {
   .smi__wrapper {
     width: 600px;
@@ -217,9 +228,6 @@ img {
 }
 .contacts__email span {
   display: block;
-}
-.header {
-  padding: 10px 0 0 0;
 }
 .header__logo-text {
   margin: 0;
@@ -311,8 +319,10 @@ img {
     margin-left: 150px;
   }
   .header__logo {
+    position: relative;
+    top: -20px;
     width: 280px;
-    margin: -20px auto 0 auto;
+    margin: 0 auto;
   }
   .header__logo-text {
     font-size: 16px;
@@ -328,8 +338,8 @@ img {
     font-weight: bold;
   }
   .header__logo {
+    top: -30px;
     width: 400px;
-    margin: -30px auto 0 auto;
   }
 }
 .social {
