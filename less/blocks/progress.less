@@ -1,13 +1,14 @@
-.progress__item {
+.progress__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px 0 0 0;
 }
 
-.progress__wrapper {
+.progress__item {
   width: 135px;
   margin: 0 0 10px 0;
+  border: 1px solid crimson;
 }
 
 .progress__title {
@@ -19,7 +20,7 @@
 }
 
 @media (min-width: 768px) {
-  .progress__wrapper {
+  .progress__item {
     width: 290px;
   }
 

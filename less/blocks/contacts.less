@@ -17,3 +17,29 @@
 .contacts__email span {
   display: block;
 }
+
+.contacts__link {
+  color: @main-color;
+}
+
+.contacts__link:hover {
+  color: @site-text;
+}
+
+.contacts__link:visited {
+  color: @border-menu;
+}
+
+@media (min-width: 768px) {
+  .contacts p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contacts p {
+    font-size: 18px;
+    line-height: 2em;
+  }
+
+}

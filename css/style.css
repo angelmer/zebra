@@ -55,11 +55,33 @@ img {
             box-shadow: none;
   }
 }
+@media (min-width: 500px) and (max-width: 767px) {
+  body {
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: 100% ;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1090px) and (max-width: 1199px) {
+  body {
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: 100% ;
+    background-attachment: fixed;
+  }
+}
+@media (min-width: 1450px) {
+  body {
+    background: url('../img/bg.jpg') no-repeat;
+    background-size: 100% ;
+    background-attachment: fixed;
+  }
+}
 .container {
   width: 320px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
+  background: #ffffff;
 }
 @media (min-width: 768px) {
   .container {
@@ -68,7 +90,7 @@ img {
     padding-right: 50px;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1200px) {
   .container {
     width: 1000px;
     padding-left: 30px;
@@ -77,6 +99,9 @@ img {
 }
 .footer {
   padding: 10px 0 10px 0;
+  background: #c71a1a;
+}
+.footer .container {
   background: #c71a1a;
 }
 .cartoons__item {
@@ -154,7 +179,7 @@ img {
     width: 500px;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1200px) {
   .bloger__wrapper {
     margin: 0 0 0 100px;
   }
@@ -175,7 +200,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.progress__item {
+.progress__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,9 +211,10 @@ img {
           justify-content: space-between;
   padding: 20px 0 0 0;
 }
-.progress__wrapper {
+.progress__item {
   width: 135px;
   margin: 0 0 10px 0;
+  border: 1px solid crimson;
 }
 .progress__title {
   font-size: 16px;
@@ -197,7 +223,7 @@ img {
   font-size: 14px;
 }
 @media (min-width: 768px) {
-  .progress__wrapper {
+  .progress__item {
     width: 290px;
   }
 }
@@ -214,6 +240,19 @@ img {
   height: 250px;
   background: url('../img/map-mobile.jpg') no-repeat 50% antiquewhite;
 }
+@media (min-width: 768px) {
+  .map {
+    width: 768px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .map {
+    width: 1000px;
+    height: 400px;
+  }
+}
 .contacts {
   padding: 20px 0 20px 0;
 }
@@ -229,6 +268,26 @@ img {
 .contacts__email span {
   display: block;
 }
+.contacts__link {
+  color: #c71a1a;
+}
+.contacts__link:hover {
+  color: #E37676;
+}
+.contacts__link:visited {
+  color: #810808;
+}
+@media (min-width: 768px) {
+  .contacts p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1200px) {
+  .contacts p {
+    font-size: 18px;
+    line-height: 2em;
+  }
+}
 .header__logo-text {
   margin: 0;
   font-size: 12px;
@@ -239,7 +298,6 @@ img {
   top: 20px;
   right: 0;
   height: 100%;
-  padding: 10px 10px 10px 10px;
   z-index: 100;
 }
 .header__navigation-block {
@@ -329,7 +387,7 @@ img {
     font-weight: bold;
   }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1200px) {
   .header__navigation-item:nth-child(4) {
     margin-left: 410px;
   }
@@ -369,7 +427,6 @@ img {
 }
 .main {
   position: relative;
-  padding: 20px 0 0 0;
 }
 .main__preview {
   position: relative;
@@ -454,8 +511,13 @@ img {
     -ms-flex-item-align: center;
         align-self: center;
   }
+  .main__bottom-image {
+    height: 95px;
+    background: url('../img/lenta-tablet.jpg') no-repeat;
+    background-size: 100%;
+  }
 }
-@media (min-width: 1150px) {
+@media (min-width: 1200px) {
   .main__preview::after {
     top: 450px;
   }
@@ -465,6 +527,10 @@ img {
   }
   .main__features-text {
     width: 320px;
+  }
+  .main__bottom-image {
+    height: 135px;
+    background: url('../img/lenta.jpg') no-repeat;
   }
 }
 .copyright__text {
