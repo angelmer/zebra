@@ -69,7 +69,7 @@ img {
     background-attachment: fixed;
   }
 }
-@media (min-width: 1450px) {
+@media (min-width: 1450 px) {
   body {
     background: url('../img/bg.jpg') no-repeat;
     background-size: 100% ;
@@ -349,7 +349,7 @@ img {
   border-radius: 8px;
 }
 .header__navigation-link:hover {
-  background-color: #E34F4F;
+  background-color: black;
 }
 @media (min-width: 768px) {
   .header__navigation--closed .header__navigation-block {
@@ -398,6 +398,7 @@ img {
   .header__logo {
     top: -30px;
     width: 400px;
+    border: 1px solid black;
   }
 }
 .social {
