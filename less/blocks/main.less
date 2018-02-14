@@ -11,20 +11,20 @@
 .main__preview::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -10px;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 10px;
   background: @main-color;
 }
 
 .main__preview::after {
   content: "";
   position: absolute;
-  top: 143px;
+  top: 125px;
   left: 0;
   width: 100%;
-  height: 20px;
+  height: 10px;
   background: @main-color;
 }
 
@@ -70,7 +70,12 @@
   }
 
   .main__preview::after {
-    top: 300px;
+    top: 310px;
+    background: @black;
+  }
+
+  .main__preview::before {
+    background: @black;
   }
 
   .main__features {

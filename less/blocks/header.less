@@ -10,15 +10,17 @@
   top: 20px;
   right: 0;
   height: 100%;
+  background-color: @main-color;
   z-index: 100;
 }
 
 .header__navigation-block {
   margin: 0;
   padding: 0;
-  background-color: @main-color;
+  background: @main-color;
   z-index: 100;
 }
+
 
 #toggler {
   position: absolute;
@@ -90,31 +92,44 @@
   }
 
   .header__navigation-link {
+    padding: 5px 20px 5px 20px;
     border: none;
     border-radius: 0;
   }
 
   .header__navigation-item:nth-child(4){
-    margin-left: 150px;
+    margin-left: 100px;
   }
 
   .header__logo {
     position: relative;
-    top: -20px;
-    width: 280px;
+    width: 61px;
+    top: -30px;
+    left: 120px;
+  }
+
+  .header__logo-wrapper {
+    width: 300px;
+    height: 25px;
     margin: 0 auto;
+    background: url('../img/logo-around-tablet.png') no-repeat;
   }
 
   .header__logo-text {
-  font-size: 16px;
-  font-weight: bold;
+    margin: 20px  0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .header__navigation-container {
+    background: @main-color;
   }
 
 }
 
 @media (min-width: 1200px) {
   .header__navigation-item:nth-child(4){
-    margin-left: 410px;
+    margin-left: 150px;
   }
 
   .header__navigation-link {
@@ -124,8 +139,18 @@
 
   .header__logo {
     top: -30px;
+    left: 170px;
+    width: 87px;
+  }
+
+  .header__logo-wrapper {
+    height: 45px;
     width: 400px;
-    border: 1px solid black;
+    background: url('../img/logo-around.png') no-repeat 0 10px;
+  }
+
+  .header__logo-text {
+    margin: 30px 0 0 0;
   }
 
 }

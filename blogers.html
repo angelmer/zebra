@@ -21,39 +21,44 @@
     </div>
   </div>
   <nav class="header__navigation header__navigation--closed header__navigation--nojs" id="navigation">
-    <button id="toggler"></button>
-    <ul class="header__navigation-block">
-      <li class="header__navigation-item">
-        <a class="header__navigation-link"  href="cartoons.html">мультфильмы</a>
-      </li>
-      <li class="header__navigation-item">
-        <a class="header__navigation-link" href="blogers.html">видеоблогинг</a>
-      </li>
-      <li class="header__navigation-item">
-        <a class="header__navigation-link" href="photo.html">Фото</a>
-      </li>
-      <li class="header__navigation-item">
-        <a class="header__navigation-link" href="smi.html">СМИ</a>
-      </li>
-      <li class="header__navigation-item">
-        <a class="header__navigation-link" href="progress.html">Достижения</a>
-      </li>
-      <li class="header__navigation-item">
-        <a class="header__navigation-link" href="contacts.html">Контакты</a>
-      </li>
-    </ul>
+    <div class="container header__navigation-container">
+      <button id="toggler"></button>
+      <ul class="header__navigation-block">
+        <li class="header__navigation-item">
+          <a class="header__navigation-link"  href="cartoons.html">мультфильмы</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" >видеоблогинг</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="photo.html">Фото</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="smi.html">СМИ</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="progress.html">Достижения</a>
+        </li>
+        <li class="header__navigation-item">
+          <a class="header__navigation-link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
   </nav>
   <div class="container">
-    <div class="header__logo">
-      <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
-      <a href="index.html">
-        <picture>
-          <source media="(min-width: 1150px)" srcset="img/logo-desktop.png">
-          <img class="main-menu__logo--mobile" src="img/logo-mobile.png" alt="logo"/>
-        </picture>
-      </a>
-      <p class="header__logo-text">студия видеотворчества и мультипликации</p>
+    <div class="header__logo-wrapper">
+      <div class="header__logo">
+        <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
+        <a href="index.html">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-middle.png">
+            <source media="(min-width: 768px)" srcset="img/logo-middle-tablet.png">
+            <img class="main-menu__logo--mobile" src="img/logo-mobile.png" alt="logo"/>
+          </picture>
+        </a>
+      </div>
     </div>
+    <p class="header__logo-text">студия видеотворчества и мультипликации</p>
   </div>
 </header>
 <main class="main__blogers">

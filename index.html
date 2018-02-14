@@ -21,6 +21,7 @@
     </div>
     </div>
     <nav class="header__navigation header__navigation--closed header__navigation--nojs" id="navigation">
+    <div class="container header__navigation-container">
       <button id="toggler"></button>
       <ul class="header__navigation-block">
         <li class="header__navigation-item">
@@ -42,18 +43,22 @@
           <a class="header__navigation-link" href="contacts.html">Контакты</a>
         </li>
       </ul>
-    </nav>
+    </div>
+  </nav>
     <div class="container">
+      <div class="header__logo-wrapper">
       <div class="header__logo">
         <h1 class="header__logo-item visually-hidden">МультЗебра</h1>
         <a>
           <picture>
-            <source media="(min-width: 1150px)" srcset="img/logo-desktop.png">
+            <source media="(min-width: 1200px)" srcset="img/logo-middle.png">
+            <source media="(min-width: 768px)" srcset="img/logo-middle-tablet.png">
             <img class="main-menu__logo--mobile" src="img/logo-mobile.png" alt="logo"/>
           </picture>
         </a>
-        <p class="header__logo-text">студия видеотворчества и мультипликации</p>
       </div>
+      </div>
+      <p class="header__logo-text">студия видеотворчества и мультипликации</p>
     </div>
   </header>
   <main class="main">

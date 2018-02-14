@@ -4,14 +4,19 @@
 
 .social__wrapper {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   padding: 0 20px 0 20px;
 }
 
 .social__icon {
   width: 30px;
   height: 30px;
+  margin: 0 0 0 40px;
   border-radius: 50%;
+}
+
+.social__icon:first-child {
+  margin: 0;
 }
 
 .social__icon-youtube {
@@ -24,4 +29,16 @@
 
 .social__icon-instagram {
   background: url('../img/instagram.svg') no-repeat;
+}
+
+
+@media (min-width: 768px) {
+.social__icon {
+  margin: 0 0 0 80px;
+}
+
+  .social__icon:first-child {
+    margin: 0;
+  }
+
 }
