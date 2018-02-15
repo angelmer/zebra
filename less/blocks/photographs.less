@@ -1,0 +1,54 @@
+
+.photo__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo__wrapper {
+  position: relative;
+}
+
+.photo__wrapper:hover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/increase.svg') 100% 40% no-repeat rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.photo__items img {
+  height: 90px;
+  margin: 0 0 15px 0;
+  border: 3px solid @image-border;
+}
+
+.photo__title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .photo__items img {
+    height: 130px;
+  }
+
+  .photo__title {
+    font-size: 18px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  .photo__items img {
+    height: 170px;
+  }
+
+  .photo__title {
+    font-size: 24px;
+    margin: 0 0 35px 0;
+  }
+
+}
