@@ -14,6 +14,19 @@
   z-index: 100;
 }
 
+.header__navigation-link:hover {
+  background-color: black;
+}
+
+.header__navigation--active {
+  background: @border-menu;
+}
+
+.header__navigation--active:hover {
+  background: @border-menu;
+}
+
+
 .header__navigation-block {
   margin: 0;
   padding: 0;
@@ -70,10 +83,6 @@
   border-radius: 8px;
 }
 
-.header__navigation-link:hover {
-  background-color: black;
-}
-
 @media (min-width: 768px) {
   .header__navigation--closed .header__navigation-block {
     position: static;
@@ -106,6 +115,11 @@
     width: 61px;
     top: -30px;
     left: 120px;
+  }
+
+  .header__logo:hover {
+    box-shadow: 0 0 5px 2px;
+    border-radius: 15px;
   }
 
   .header__logo-wrapper {
