@@ -155,8 +155,10 @@ img {
   }
   .cartoons__description {
     width: 300px;
+    padding: 5px 0 0 0;
     font-size: 16px;
     font-weight: bold;
+    text-align: center;
   }
 }
 .bloger {
@@ -191,6 +193,12 @@ img {
 @media (min-width: 768px) {
   .bloger__description {
     width: 500px;
+  }
+  .bloger__about {
+    font-size: 16px;
+  }
+  .bloger__link {
+    font-size: 16px;
   }
 }
 @media (min-width: 1200px) {
@@ -280,10 +288,30 @@ img {
 .progress__description {
   font-size: 14px;
 }
-@media (min-width: 1150px) {
+.smi_item {
+  padding: 0 0 20px 0;
+}
+.smi__description {
+  padding: 5px 0 0 0;
+  font-size: 12px;
+}
+@media (min-width: 768px) {
+  .smi__wrapper {
+    width: 400px;
+    margin: 0 auto;
+  }
+  .smi_item {
+    padding: 0 0 30px 0;
+  }
+  .smi__description {
+    padding: 10px 0 0 0;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
   .smi__wrapper {
     width: 600px;
-    margin: 0 auto;
   }
   .smi__description {
     text-align: center;
@@ -473,9 +501,7 @@ img {
     background: url('../img/logo-around-tablet.png') no-repeat;
   }
   .header__logo-text {
-    margin: 20px  0 0 0;
     font-size: 16px;
-    font-weight: bold;
   }
 }
 @media (min-width: 1200px) {
@@ -644,6 +670,7 @@ img {
   }
   .main__features-text {
     width: 320px;
+    padding: 10px 20px;
   }
   .main__bottom-image {
     height: 135px;
