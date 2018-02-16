@@ -1,11 +1,4 @@
 
-.header__logo-text {
-  margin: 0;
-  font-size: 12px;
-  text-align: center;
-  color: @main-color;
-}
-
 .header__navigation {
   top: 20px;
   right: 0;
@@ -88,6 +81,36 @@
   background: url("../img/close.png") no-repeat 0 5px @main-color;
 }
 
+.header__logo {
+  position: relative;
+  width: 61px;
+  left: 120px;
+}
+
+.header__logo-wrapper {
+  width: 280px;
+  height: 50px;
+  margin: 0 auto;
+  background: url('../img/logo-around-mobile.png') 0 25px no-repeat;
+}
+
+.header__logo:hover {
+  box-shadow: 0 0 5px 2px;
+  border-radius: 15px;
+}
+
+.header__logo-main:hover {
+  box-shadow: none;
+}
+
+.header__logo-text {
+  margin: 20px  0 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: @main-color;
+}
+
 @media (min-width: 768px) {
   .header__navigation--closed .header__navigation-block {
     position: static;
@@ -116,21 +139,13 @@
   }
 
   .header__logo {
-    position: relative;
-    width: 61px;
     top: -30px;
     left: 120px;
   }
 
-  .header__logo:hover {
-    box-shadow: 0 0 5px 2px;
-    border-radius: 15px;
-  }
-
   .header__logo-wrapper {
-    width: 300px;
     height: 25px;
-    margin: 0 auto;
+    width: 300px;
     background: url('../img/logo-around-tablet.png') no-repeat;
   }
 

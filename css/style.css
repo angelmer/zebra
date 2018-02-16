@@ -341,12 +341,6 @@ img {
     line-height: 2em;
   }
 }
-.header__logo-text {
-  margin: 0;
-  font-size: 12px;
-  text-align: center;
-  color: #c71a1a;
-}
 .header__navigation {
   top: 20px;
   right: 0;
@@ -416,6 +410,33 @@ img {
 .header__navigation--opened #toggler {
   background: url("../img/close.png") no-repeat 0 5px #c71a1a;
 }
+.header__logo {
+  position: relative;
+  width: 61px;
+  left: 120px;
+}
+.header__logo-wrapper {
+  width: 280px;
+  height: 50px;
+  margin: 0 auto;
+  background: url('../img/logo-around-mobile.png') 0 25px no-repeat;
+}
+.header__logo:hover {
+  -webkit-box-shadow: 0 0 5px 2px;
+          box-shadow: 0 0 5px 2px;
+  border-radius: 15px;
+}
+.header__logo-main:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.header__logo-text {
+  margin: 20px  0 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  color: #c71a1a;
+}
 @media (min-width: 768px) {
   .header__navigation--closed .header__navigation-block {
     position: static;
@@ -443,20 +464,12 @@ img {
     margin-left: 100px;
   }
   .header__logo {
-    position: relative;
-    width: 61px;
     top: -30px;
     left: 120px;
   }
-  .header__logo:hover {
-    -webkit-box-shadow: 0 0 5px 2px;
-            box-shadow: 0 0 5px 2px;
-    border-radius: 15px;
-  }
   .header__logo-wrapper {
-    width: 300px;
     height: 25px;
-    margin: 0 auto;
+    width: 300px;
     background: url('../img/logo-around-tablet.png') no-repeat;
   }
   .header__logo-text {
