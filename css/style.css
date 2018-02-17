@@ -701,8 +701,8 @@ img {
   top: 20%;
   left: 10%;
   width: 80%;
+  height: 400px;
   z-index: 100;
-  background: red;
   text-align: center;
 }
 .modal::before {
@@ -727,4 +727,7 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(255, 255, 255, 0.7);
+}
+.overlay__opened {
+  display: block;
 }
