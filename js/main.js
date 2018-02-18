@@ -35,7 +35,7 @@ carousel();
 
 function carousel () {
   var i;
-  var x = document.getElementsByClassName('main__preview-slide');
+  var x = document.getElementsByClassName('main__preview-item');
 
   for (i = 0; i < x.length; i++) {
     x[i].style.display = 'none';
@@ -48,5 +48,5 @@ function carousel () {
   }
 
   x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 2000);
+  setTimeout(carousel, 3000);
 }
