@@ -48,5 +48,5 @@ function carousel () {
   }
 
   x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 3000);
+  setTimeout(carousel, 5000);
 }
