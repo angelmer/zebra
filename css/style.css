@@ -212,9 +212,9 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .photo__wrapper {
   position: relative;
@@ -229,7 +229,7 @@ img {
 }
 .photo__items img {
   height: 90px;
-  margin: 0 0 15px 0;
+  margin: 0 0 5px 5px;
   border: 3px solid #141619;
 }
 .photo__title {
@@ -578,55 +578,11 @@ img {
   }
 }
 .main__preview {
+  position: relative;
   width: 280px;
+  min-height: 150px;
   padding: 0 0 30px 0;
   overflow: hidden;
-}
-.w3-animate-fading {
-  -webkit-animation: fading 5s infinite;
-  animation: fading 5s infinite;
-}
-@-webkit-keyframes fading {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes fading {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.w3-animate-opacity {
-  -webkit-animation: opac 1.5s;
-  animation: opac 1.5s;
-}
-@-webkit-keyframes opac {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes opac {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 .main__features {
   padding: 0 0 20px 0;
@@ -658,9 +614,92 @@ img {
 .main__features-icon-third {
   background: url('../img/tv.png') no-repeat 10% 50%;
 }
+@-webkit-keyframes anim_slides {
+  0% {
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.main__preview ul li {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  /* css3 анимация */
+  -webkit-animation-name: anim_slides;
+  -webkit-animation-duration: 28.0s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+  -webkit-animation-delay: 0;
+  -webkit-animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-name: anim_slides;
+  -moz-animation-duration: 28.0s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-direction: normal;
+  -moz-animation-delay: 0;
+  -moz-animation-play-state: running;
+  -moz-animation-fill-mode: forwards;
+}
+/* css3 delays */
+.main__preview-item2 {
+  -webkit-animation-delay: 6.0s;
+  -moz-animation-delay: 6.0s;
+}
+.main__preview-item3 {
+  -webkit-animation-delay: 12.0s;
+  -moz-animation-delay: 12.0s;
+}
+.main__preview-item4 {
+  -webkit-animation-delay: 18.0s;
+  -moz-animation-delay: 18.0s;
+}
+.main__preview-item5 {
+  -webkit-animation-delay: 22.0s;
+  -moz-animation-delay: 22.0s;
+}
+.main__preview-slide img {
+  display: block;
+}
+/* keyframes #anim_titles */
+@-webkit-keyframes anim_titles {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  5% {
+    left: 10%;
+    opacity: 1;
+  }
+  20% {
+    left: 10%;
+    opacity: 1;
+  }
+  25% {
+    left: 100%;
+    opacity: 0;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
 @media (min-width: 768px) {
   .main__preview {
     width: 100%;
+    min-height: 330px;
   }
   .main__features {
     display: -webkit-box;
@@ -692,6 +731,9 @@ img {
   }
 }
 @media (min-width: 1200px) {
+  .main__preview {
+    min-height: 460px;
+  }
   .main__preview-slides {
     margin: 0 auto;
     width: 966px;
