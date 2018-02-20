@@ -16,11 +16,11 @@
   font-size: 12px;
 }
 
-.cartoons__link::before {
+.cartoons__link:hover::before {
   content: '';
   position: absolute;
-  top: 40%;
-  left: 45%;
+  top: 35%;
+  left: 35%;
   width: 30px;
   height: 30px;
   background: url('../img/play-key.svg') no-repeat rgba(255,255,255, 0.5);
@@ -48,6 +48,11 @@
     font-size: 16px;
     font-weight: bold;
     text-align: center;
+  }
+
+  .cartoons__link:hover::before {
+    top: 40%;
+    left: 45%;
   }
 
 }

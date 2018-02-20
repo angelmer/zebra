@@ -28,25 +28,42 @@ toggler.addEventListener('click', function(event){
 
 });
 
-//main preview slider
+//открытие полноразмерного изображения
 
-var slideIndex = 0;
-carousel();
+var photoWrappers = [].slice.call(document.querySelectorAll('.photo__wrapper'));
 
-function carousel () {
-  var i;
-  var x = document.getElementsByClassName('main__preview-item');
+photoWrappers.forEach(function(element, i){
 
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = 'none';
-  }
+  element.addEventListener('click', function(){
 
-  slideIndex++;
+    alert(this);
+    var link =  element.querySelector('img').src;
+    var subLink = link.substr(0 ,[ link.length -4]) + '-desktop.jpg';
+    alert(subLink);
 
-  if (slideIndex > x.length) {
-    slideIndex = 1;
-  }
+  })
+});
 
-  x[slideIndex-1].style.display = 'block';
-  setTimeout(carousel, 5000);
-}
+
+/*
+
+var elements = [].slice.call(document.querySelectorAll('.a'));
+
+
+
+
+
+elements.forEach(function (element, i) {
+
+  element.addEventListener('click', function () {
+
+    alert(this); // див на который кликнули
+
+    alert(element); // див на который кликнули
+
+    alert(i); // номер дива на который кликнули
+
+  })
+
+});
+*/
