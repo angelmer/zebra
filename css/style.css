@@ -243,7 +243,6 @@ img {
   text-align: center;
 }
 .photo__popup {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;

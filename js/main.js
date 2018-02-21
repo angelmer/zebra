@@ -31,39 +31,21 @@ toggler.addEventListener('click', function(event){
 //открытие полноразмерного изображения
 
 var photoWrappers = [].slice.call(document.querySelectorAll('.photo__wrapper'));
+var popUp = document.querySelector('.photo__popup');
+var popUpImage = document.querySelector('.photo__popup-image');
 
 photoWrappers.forEach(function(element, i){
 
   element.addEventListener('click', function(){
 
-    alert(this);
     var link =  element.querySelector('img').src;
-    var subLink = link.substr(0 ,[ link.length -4]) + '-desktop.jpg';
-    alert(subLink);
-
+    var subLink = link.substr(22 ,[ link.length -29]) + '-desktop.jpg';
+    popUpImage.src = subLink;
+    popUp.classList.remove('visually-hidden');
   })
 });
 
+popUp.addEventListener('click', function(){
 
-/*
-
-var elements = [].slice.call(document.querySelectorAll('.a'));
-
-
-
-
-
-elements.forEach(function (element, i) {
-
-  element.addEventListener('click', function () {
-
-    alert(this); // див на который кликнули
-
-    alert(element); // див на который кликнули
-
-    alert(i); // номер дива на который кликнули
-
-  })
-
+  popUp.classList.add('visually-hidden');
 });
-*/
