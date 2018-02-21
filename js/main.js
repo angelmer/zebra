@@ -54,11 +54,11 @@ photoWrappers.forEach(function(element, i){
 
 //открытие полноразмерного изображения страница достижения
 
-var progressWrappers = [].slice.call(document.querySelectorAll('.progress__wrapper'));
+var progressItems = [].slice.call(document.querySelectorAll('.progress__item'));
 var progressPopUp = document.querySelector('.progress__popup');
 var progressPopUpImage = document.querySelector('.progress__popup-image');
 
-progressWrappers.forEach(function(element, i){
+progressItems.forEach(function(element, i){
 
   element.addEventListener('click', function(){
 

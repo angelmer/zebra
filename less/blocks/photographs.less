@@ -2,12 +2,15 @@
 .photo__items {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .photo__wrapper {
   position: relative;
+  width: 270px;
+  margin: 5px auto;
   list-style: none;
+  border: 3px solid @image-border;
 }
 
 .photo__wrapper:hover::before {
@@ -19,10 +22,12 @@
   cursor: pointer;
 }
 
-.photo__items img {
-  height: 90px;
-  margin: 0 0 5px 5px;
-  border: 3px solid @image-border;
+.photo__image {
+  display: block;
+  margin: 0 auto;
+  height: 170px;
+  object-fit: contain;
+
 }
 
 .photo__title {
@@ -58,8 +63,9 @@
 
 
 @media (min-width: 768px) {
-  .photo__items img {
-    height: 130px;
+
+  .photo__wrapper {
+    margin: 0 0 10px 30px;
   }
 
   .photo__title {
@@ -73,9 +79,6 @@
 }
 
 @media (min-width: 1200px) {
-  .photo__items img {
-    height: 170px;
-  }
 
   .photo__title {
     font-size: 24px;

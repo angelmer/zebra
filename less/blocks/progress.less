@@ -1,37 +1,32 @@
-.progress__image {
-  filter: grayscale(100%);
-}
-
-.progress__image:hover {
-  filter: grayscale(0);
-}
 
 .progress__items {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   padding: 20px 0 0 0;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
-.progress__item img {
+.progress__image {
+  display: block;
   height: 170px;
-  margin: 0 0 10px 0;
-  border: 3px solid @image-border;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  object-fit: contain;
 }
 
 .progress__item {
   position: relative;
+  width: 270px;
+  margin: 5px auto;
   list-style: none;
+  background: grey;
+  border: 3px solid @image-border;
+  cursor: pointer;
 }
 
-.progress__wrapper:hover::before  {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('../img/increase.svg') 100% 40% no-repeat rgba(255, 255, 255, 0.3);
-  cursor: pointer;
+.progress__item:hover .progress__image{
+  filter: grayscale(0);
 }
 
 .progress__title {
@@ -69,6 +64,10 @@
 }
 
 @media (min-width: 768px) {
+  .progress__item {
+    margin: 0 0 10px 30px;
+  }
+
   .progress__popup-wrapper {
     margin: 15% auto;
   }
