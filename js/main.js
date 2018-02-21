@@ -28,7 +28,7 @@ toggler.addEventListener('click', function(event){
 
 });
 
-//открытие полноразмерного изображения
+//открытие полноразмерного изображения страница фото
 
 var photoWrappers = [].slice.call(document.querySelectorAll('.photo__wrapper'));
 var popUp = document.querySelector('.photo__popup');
@@ -42,10 +42,36 @@ photoWrappers.forEach(function(element, i){
     var subLink = link.substr(22 ,[ link.length -29]) + '-desktop.jpg';
     popUpImage.src = subLink;
     popUp.classList.remove('visually-hidden');
-  })
+  });
+
+  popUp.addEventListener('click', function(){
+
+    popUp.classList.add('visually-hidden');
+    popUpImage.src = '#';
+  });
 });
 
-popUp.addEventListener('click', function(){
 
-  popUp.classList.add('visually-hidden');
+//открытие полноразмерного изображения страница достижения
+
+var progressWrappers = [].slice.call(document.querySelectorAll('.progress__wrapper'));
+var progressPopUp = document.querySelector('.progress__popup');
+var progressPopUpImage = document.querySelector('.progress__popup-image');
+
+progressWrappers.forEach(function(element, i){
+
+  element.addEventListener('click', function(){
+
+    var progressLink =  element.querySelector('img').src;
+    var subLink = progressLink.substr(22 ,[ progressLink.length -29]) + '-desktop.jpg';
+    progressPopUpImage.src = subLink;
+    progressPopUp.classList.remove('visually-hidden');
+  });
+
+  progressPopUp.addEventListener('click', function(){
+
+    progressPopUp.classList.add('visually-hidden');
+    progressPopUpImage.src = '#';
+  });
 });
+
