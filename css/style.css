@@ -288,6 +288,14 @@ img {
     margin: 5% auto;
   }
 }
+.progress__image {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.progress__image:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
 .progress__items {
   position: relative;
   display: -webkit-box;
