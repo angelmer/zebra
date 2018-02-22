@@ -226,6 +226,8 @@ img {
   margin: 5px auto;
   list-style: none;
   border: 3px solid #141619;
+  background: #808080;
+  cursor: pointer;
 }
 .photo__wrapper:hover::before {
   content: '';
@@ -235,12 +237,18 @@ img {
   background: url('../img/increase.svg') 100% 40% no-repeat rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
+.photo__wrapper:hover .photo__image {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
 .photo__image {
   display: block;
   margin: 0 auto;
   height: 170px;
   -o-object-fit: contain;
      object-fit: contain;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 .photo__title {
   margin: 0 0 10px 0;
@@ -316,7 +324,7 @@ img {
   width: 270px;
   margin: 5px auto;
   list-style: none;
-  background: grey;
+  background: #808080;
   border: 3px solid #141619;
   cursor: pointer;
 }

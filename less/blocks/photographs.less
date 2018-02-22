@@ -11,6 +11,8 @@
   margin: 5px auto;
   list-style: none;
   border: 3px solid @image-border;
+  background: @grey-color;
+  cursor: pointer;
 }
 
 .photo__wrapper:hover::before {
@@ -22,12 +24,16 @@
   cursor: pointer;
 }
 
+.photo__wrapper:hover .photo__image {
+  filter: grayscale(0);
+}
+
 .photo__image {
   display: block;
   margin: 0 auto;
   height: 170px;
   object-fit: contain;
-
+  filter: grayscale(100%);
 }
 
 .photo__title {
