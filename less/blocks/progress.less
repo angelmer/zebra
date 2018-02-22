@@ -1,4 +1,28 @@
 
+.progress__navigation {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.progress__navigation-item {
+   list-style: none;
+  margin: 0 10px 0 10px;
+}
+
+.progress__navigation-item a{
+  color: @main-color;
+  text-decoration: none;
+  border-bottom: 1px solid @black;
+}
+
+.progress__navigation-item a:hover{
+  color: @hover-menu;
+}
+
+.progress__navigation-item a:visited{
+  color: @border-menu;
+}
+
 .progress__items {
   position: relative;
   display: flex;
@@ -61,6 +85,15 @@
   margin: 0 auto;
   height: 100%;
   object-fit: contain;
+}
+
+@keyframes progress_apearance {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
+.progress__animation {
+  animation: progress_apearance 0.5s linear;
 }
 
 @media (min-width: 768px) {

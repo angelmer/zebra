@@ -210,6 +210,29 @@ img {
     margin: 0 0 0 100px;
   }
 }
+.photo__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.photo__navigation-item {
+  list-style: none;
+  margin: 0 15px 0 15px;
+}
+.photo__navigation-item a {
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+  color: #c71a1a;
+}
+.photo__navigation-item a:hover {
+  color: #E34F4F;
+}
+.photo__navigation-item a:visited {
+  color: #810808;
+}
 .photo__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -278,6 +301,30 @@ img {
   -o-object-fit: contain;
      object-fit: contain;
 }
+@-webkit-keyframes apearance {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes apearance {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.photo__animation {
+  -webkit-animation: apearance 0.5s linear;
+          animation: apearance 0.5s linear;
+}
 @media (min-width: 768px) {
   .photo__wrapper {
     margin: 0 0 10px 30px;
@@ -297,6 +344,28 @@ img {
   .photo__popup-wrapper {
     margin: 5% auto;
   }
+}
+.progress__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.progress__navigation-item {
+  list-style: none;
+  margin: 0 10px 0 10px;
+}
+.progress__navigation-item a {
+  color: #c71a1a;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+}
+.progress__navigation-item a:hover {
+  color: #E34F4F;
+}
+.progress__navigation-item a:visited {
+  color: #810808;
 }
 .progress__items {
   position: relative;
@@ -360,6 +429,30 @@ img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@-webkit-keyframes progress_apearance {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes progress_apearance {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+.progress__animation {
+  -webkit-animation: progress_apearance 0.5s linear;
+          animation: progress_apearance 0.5s linear;
 }
 @media (min-width: 768px) {
   .progress__item {

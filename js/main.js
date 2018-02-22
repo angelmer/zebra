@@ -42,11 +42,13 @@ photoWrappers.forEach(function(element, i){
     var subLink = link.substr(22 ,[ link.length -29]) + '-desktop.jpg';
     popUpImage.src = subLink;
     popUp.classList.remove('visually-hidden');
+    popUpImage.classList.add('photo__animation');
   });
 
   popUp.addEventListener('click', function(){
 
     popUp.classList.add('visually-hidden');
+    popUpImage.classList.remove('photo__animation');
     popUpImage.src = '#';
   });
 });
@@ -66,11 +68,13 @@ progressItems.forEach(function(element, i){
     var subLink = progressLink.substr(22 ,[ progressLink.length -29]) + '-desktop.jpg';
     progressPopUpImage.src = subLink;
     progressPopUp.classList.remove('visually-hidden');
+    progressPopUpImage.classList.add('progress__animation');
   });
 
   progressPopUp.addEventListener('click', function(){
 
     progressPopUp.classList.add('visually-hidden');
+    progressPopUpImage.classList.remove('progress__animation')
     progressPopUpImage.src = '#';
   });
 });
