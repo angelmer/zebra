@@ -78,4 +78,3 @@ progressItems.forEach(function(element, i){
     progressPopUpImage.src = '#';
   });
 });
-
