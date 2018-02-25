@@ -6,7 +6,7 @@
   <title>Студия Zebra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 <body>
@@ -63,8 +63,20 @@
 </header>
 <main class="main__cartoon">
   <div class="container">
-    <h2>Мультфильмы</h2>
+    <h2 class="visually-hidden">Мультфильмы</h2>
     <section class="cartoons">
+      <article class="cartoons__item">
+        <div class="cartoons__wrapper">
+          <a class="cartoons__link" href="https://www.youtube.com/watch?v=5X40qnYcjhE" target="_blank">
+            <picture class="cartoons__images">
+              <source media="(min-width: 768px)" srcset="img/cartoons/afanasy-tablet7.jpg">
+              <img src="img/cartoons/afanasy-mobile-7@1x.jpg" class="cartoon__item" alt="Афанасий Фёдорович"
+                   srcset="img/cartoons/afanasy-mobile-7@2x.jpg"/>
+            </picture>
+          </a>
+        </div>
+        <p class="cartoons__description">Мультфильм про червяка Афанасия Фёдоровича 7 серия</p>
+      </article>
       <article class="cartoons__item">
         <div class="cartoons__wrapper">
           <a class="cartoons__link" href="https://www.youtube.com/watch?v=psB9G9BYYJU&t=1s" target="_blank">
@@ -91,9 +103,9 @@
       </article>
       <article class="cartoons__item">
         <div class="cartoons__wrapper">
-          <a class="cartoons__link" href="https://www.youtube.com/watch?v=PR27Qc6gN1Y">
+          <a class="cartoons__link" href="https://www.youtube.com/watch?v=PR27Qc6gN1Y" target="_blank">
             <picture class="cartoons__images">
-              <source media="(min-width: 768px)" srcset="img/cartoons/valentine-tablet.jpg" target="_blank">
+              <source media="(min-width: 768px)" srcset="img/cartoons/valentine-tablet.jpg">
               <img src="img/cartoons/valentine-mobile@1x.jpg" class="cartoon__item" alt="valentine in colors"
                    srcset="img/cartoons/valentine-mobile@2x.jpg"/>
             </picture>

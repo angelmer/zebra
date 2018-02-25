@@ -596,8 +596,8 @@ img {
 }
 @media (min-width: 1200px) {
   .contacts p {
-    font-size: 18px;
-    line-height: 2em;
+    font-size: 20px;
+    line-height: 2.1em;
   }
 }
 .header__navigation {
