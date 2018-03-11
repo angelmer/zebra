@@ -56,11 +56,11 @@ photoWrappers.forEach(function(element, i){
 
 //открытие полноразмерного изображения страница достижения
 
-var progressItems = [].slice.call(document.querySelectorAll('.progress__item'));
-var progressPopUp = document.querySelector('.progress__popup');
-var progressPopUpImage = document.querySelector('.progress__popup-image');
+//var progressItems = [].slice.call(document.querySelectorAll('.progress__item'));
+let progressPopUp = document.querySelector('.progress__popup');
+let progressPopUpImage = document.querySelector('.progress__popup-image');
 
-progressItems.forEach(function(element, i){
+/*progressItems.forEach(function(element, i){
 
   element.addEventListener('click', function(){
 
@@ -77,4 +77,24 @@ progressItems.forEach(function(element, i){
     progressPopUpImage.classList.remove('progress__animation')
     progressPopUpImage.src = '#';
   });
-});
+});*/
+
+//refactoring code
+let progressItems = document.querySelectorAll('.progress__item');
+
+let changeSizeOfPhoto = function (photos, popUpWindow, fullSizeImage) {
+  photos.forEach(photo => {
+    photo.addEventListener('click', function () {
+      let smallImage = photo.querySelector('img').src;
+      fullSizeImage.src = smallImage.substr(22 ,[ smallImage.length -29]) + '-desktop.jpg';
+
+      if(popUpWindow.classList.contains('visually-hidden')) {
+        popUpWindow.classList.remove('visually-hidden');
+        fullSizeImage.classList.add('full-photo');
+      } else {
+        popUpWindow.classList.add('visually-hidden');
+      }
+    })
+  });
+};
+changeSizeOfPhoto(progressItems, progressPopUp, progressPopUpImage);
