@@ -34,7 +34,7 @@ var photoWrappers = [].slice.call(document.querySelectorAll('.photo__wrapper'));
 var popUp = document.querySelector('.photo__popup');
 var popUpImage = document.querySelector('.photo__popup-image');
 
-photoWrappers.forEach(function(element, i){
+/*photoWrappers.forEach(function(element, i){
 
   element.addEventListener('click', function(){
 
@@ -51,12 +51,14 @@ photoWrappers.forEach(function(element, i){
     popUpImage.classList.remove('photo__animation');
     popUpImage.src = '#';
   });
-});
+});*/
 
 
 //открытие полноразмерного изображения страница достижения
 
 //var progressItems = [].slice.call(document.querySelectorAll('.progress__item'));
+
+let progressItems = document.querySelectorAll('.progress__item');
 let progressPopUp = document.querySelector('.progress__popup');
 let progressPopUpImage = document.querySelector('.progress__popup-image');
 
@@ -80,21 +82,33 @@ let progressPopUpImage = document.querySelector('.progress__popup-image');
 });*/
 
 //refactoring code
-let progressItems = document.querySelectorAll('.progress__item');
 
-let changeSizeOfPhoto = function (photos, popUpWindow, fullSizeImage) {
-  photos.forEach(photo => {
-    photo.addEventListener('click', function () {
+function openBigPhoto(photos, popUp, bigPhoto) {
+  for (let i = 0; i < photos.length; i++) {
+    let photo = photos[i];
+
+    photo.addEventListener('click', function (event) {
+      event = event || window.event;
       let smallImage = photo.querySelector('img').src;
-      fullSizeImage.src = smallImage.substr(22 ,[ smallImage.length -29]) + '-desktop.jpg';
-
-      if(popUpWindow.classList.contains('visually-hidden')) {
-        popUpWindow.classList.remove('visually-hidden');
-        fullSizeImage.classList.add('full-photo');
-      } else {
-        popUpWindow.classList.add('visually-hidden');
+      bigPhoto.src = smallImage.substr(22, [smallImage.length - 29]) + '-desktop.jpg';
+      if(popUp.classList.contains('visually-hidden')) {
+        popUp.classList.remove('visually-hidden');
+        bigPhoto.classList.add('photo__animation');
       }
-    })
-  });
-};
-changeSizeOfPhoto(progressItems, progressPopUp, progressPopUpImage);
+    });
+  }
+}
+
+function closeBigPhoto(popUp, bigPhoto) {
+  popUp.addEventListener('click', function (event) {
+    event = event || window.event;
+    if (!popUp.classList.contains('visually-hidden')){
+      popUp.classList.add('visually-hidden');
+      bigPhoto.classList.remove('photo__animation');
+    }
+
+  })
+}
+
+openBigPhoto(progressItems, progressPopUp, progressPopUpImage);
+closeBigPhoto(progressPopUp, progressPopUpImage);
