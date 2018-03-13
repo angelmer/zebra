@@ -694,7 +694,7 @@ img {
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  color: #c71a1a;
+  color: #000000;
 }
 @media (min-width: 768px) {
   .header__navigation--closed .header__navigation-block {
@@ -732,7 +732,7 @@ img {
     background: url('../img/logo-around-tablet.png') no-repeat;
   }
   .header__logo-text {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 1200px) {
@@ -755,6 +755,7 @@ img {
   }
   .header__logo-text {
     margin: 30px 0 0 0;
+    font-size: 22px;
   }
 }
 .social {
