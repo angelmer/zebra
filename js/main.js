@@ -3,10 +3,9 @@
  */
 
 //header menu open, close
-
-var toggler = document.getElementById('toggler');
-var headerMenu = document.getElementById('navigation');
-var overlay = document.querySelector('.overlay');
+let toggler = document.getElementById('toggler');
+let headerMenu = document.getElementById('navigation');
+let overlay = document.querySelector('.overlay');
 headerMenu.classList.remove('header__navigation--nojs');
 
 toggler.addEventListener('click', function(event){
@@ -28,67 +27,24 @@ toggler.addEventListener('click', function(event){
 
 });
 
-//открытие полноразмерного изображения страница фото
 
-var photoWrappers = [].slice.call(document.querySelectorAll('.photo__wrapper'));
-var popUp = document.querySelector('.photo__popup');
-var popUpImage = document.querySelector('.photo__popup-image');
+/* открытие полноразмерного изображения страница фото и достижения
+* вызов функции происходит на данных страницах */
+let photoWrappers = document.querySelectorAll('.photo__wrapper');
+let popUp = document.querySelector('.photo__popup');
+let popUpImage = document.querySelector('.photo__popup-image');
 
-/*photoWrappers.forEach(function(element, i){
-
-  element.addEventListener('click', function(){
-
-    var link =  element.querySelector('img').src;
-    var subLink = link.substr(22 ,[ link.length -29]) + '-desktop.jpg';
-    popUpImage.src = subLink;
-    popUp.classList.remove('visually-hidden');
-    popUpImage.classList.add('photo__animation');
-  });
-
-  popUp.addEventListener('click', function(){
-
-    popUp.classList.add('visually-hidden');
-    popUpImage.classList.remove('photo__animation');
-    popUpImage.src = '#';
-  });
-});*/
-
-
-//открытие полноразмерного изображения страница достижения
-
-//var progressItems = [].slice.call(document.querySelectorAll('.progress__item'));
 
 let progressItems = document.querySelectorAll('.progress__item');
 let progressPopUp = document.querySelector('.progress__popup');
 let progressPopUpImage = document.querySelector('.progress__popup-image');
 
-/*progressItems.forEach(function(element, i){
-
-  element.addEventListener('click', function(){
-
-    var progressLink =  element.querySelector('img').src;
-    var subLink = progressLink.substr(22 ,[ progressLink.length -29]) + '-desktop.jpg';
-    progressPopUpImage.src = subLink;
-    progressPopUp.classList.remove('visually-hidden');
-    progressPopUpImage.classList.add('progress__animation');
-  });
-
-  progressPopUp.addEventListener('click', function(){
-
-    progressPopUp.classList.add('visually-hidden');
-    progressPopUpImage.classList.remove('progress__animation')
-    progressPopUpImage.src = '#';
-  });
-});*/
-
-//refactoring code
 
 function openBigPhoto(photos, popUp, bigPhoto) {
   for (let i = 0; i < photos.length; i++) {
     let photo = photos[i];
 
-    photo.addEventListener('click', function (event) {
-      event = event || window.event;
+    photo.addEventListener('click', function () {
       let smallImage = photo.querySelector('img').src;
       bigPhoto.src = smallImage.substr(22, [smallImage.length - 29]) + '-desktop.jpg';
       if(popUp.classList.contains('visually-hidden')) {
@@ -100,8 +56,8 @@ function openBigPhoto(photos, popUp, bigPhoto) {
 }
 
 function closeBigPhoto(popUp, bigPhoto) {
-  popUp.addEventListener('click', function (event) {
-    event = event || window.event;
+
+  popUp.addEventListener('click', function () {
     if (!popUp.classList.contains('visually-hidden')){
       popUp.classList.add('visually-hidden');
       bigPhoto.classList.remove('photo__animation');
@@ -110,5 +66,7 @@ function closeBigPhoto(popUp, bigPhoto) {
   })
 }
 
-openBigPhoto(progressItems, progressPopUp, progressPopUpImage);
-closeBigPhoto(progressPopUp, progressPopUpImage);
+
+
+
+
