@@ -46,7 +46,7 @@ function openBigPhoto(photos, popUp, bigPhoto) {
 
     photo.addEventListener('click', function () {
       let smallImage = photo.querySelector('img').src;
-      bigPhoto.src = smallImage.substr(22, [smallImage.length - 29]) + '-desktop.jpg';
+      bigPhoto.src = smallImage.substr(0, [smallImage.length - 7]) + '-desktop.jpg';
       if(popUp.classList.contains('visually-hidden')) {
         popUp.classList.remove('visually-hidden');
         bigPhoto.classList.add('photo__animation');
